@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Task 7.1</title>
+    <style>
+        canvas {
+            border: 10px solid #333;
+            margin: 120px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas1" width="200" height="200"></canvas>
+    <canvas id="canvas2" width="200" height="200"></canvas>
+    <canvas id="canvas3" width="200" height="200"></canvas>
+    <canvas id="canvas4" width="200" height="200"></canvas>
+    <canvas id="canvas5" width="200" height="200"></canvas>
+    <canvas id="canvas6" width="200" height="200"></canvas>
+    <canvas id="canvas7" width="200" height="200"></canvas>
+    <canvas id="canvas8" width="200" height="200"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas1');
+        const ctx = canvas.getContext('2d');
+
+        House();
+
+        function House() {
+            ctx.fillStyle = '#ffcc66'; 
+            ctx.fillRect(50, 100, 100, 100);
+
+            ctx.fillStyle = '#996633';
+            ctx.beginPath();
+            ctx.moveTo(50, 100);
+            ctx.lineTo(100, 50);
+            ctx.lineTo(150, 100);
+            ctx.closePath();
+            ctx.fill();
+
+            ctx.fillStyle = '#663300'; 
+            ctx.fillRect(80, 150, 40, 50);
+
+            ctx.fillStyle = '#99ccff';
+            ctx.fillRect(60, 110, 30, 30);
+            ctx.fillStyle = '#000'; 
+            ctx.strokeRect(60, 110, 30, 30);
+            ctx.moveTo(75, 110);
+            ctx.lineTo(75, 140);
+            ctx.moveTo(60, 125);
+            ctx.lineTo(90, 125);
+            ctx.stroke();
+        }
+
+        const canvas2 = document.getElementById('canvas2');
+        const ctx2 = canvas2.getContext('2d');
+
+        Cross();
+
+        function Cross() {
+            ctx2.fillStyle = '#5C4033'; 
+            ctx2.fillRect(90, 50, 20, 140);
+
+            ctx2.fillRect(30, 90, 140, 20);
+        }
+        
+        const canvas3 = document.getElementById('canvas3');
+        const ctx3 = canvas3.getContext('2d');
+        VinylDisc();
+
+        function VinylDisc() {
+            ctx3.fillStyle = '#1a1a1a'; 
+            ctx3.beginPath();
+            ctx3.arc(100, 100, 80, 0, 2 * Math.PI);
+            ctx3.fill();
+
+            ctx3.fillStyle = '#FFC0CB'; 
+            ctx3.beginPath();
+            ctx3.arc(100, 100, 60, 0, 2 * Math.PI);
+            ctx3.fill();
+
+            ctx3.fillStyle = '#1a1a1a'; 
+            ctx3.beginPath();
+            ctx3.arc(100, 100, 8, 0, 2 * Math.PI);
+            ctx3.fill();
+        }
+
+        const canvas4 = document.getElementById('canvas4');
+        const ctx4 = canvas4.getContext('2d');
+
+        YellowStar();
+
+        function YellowStar() {
+            ctx4.fillStyle = '#ffff00'; 
+            ctx4.beginPath();
+            ctx4.moveTo(100, 30);
+            ctx4.lineTo(115, 70);
+            ctx4.lineTo(155, 70);
+            ctx4.lineTo(125, 95);
+            ctx4.lineTo(140, 135);
+            ctx4.lineTo(100, 110);
+            ctx4.lineTo(60, 135);
+            ctx4.lineTo(75, 95);
+            ctx4.lineTo(45, 70);
+            ctx4.lineTo(85, 70);
+            ctx4.closePath();
+            ctx4.fill();
+
+            ctx4.fillStyle = '#ffa500'; 
+            ctx4.beginPath();
+            ctx4.moveTo(100, 30);
+            ctx4.lineTo(108, 55);
+            ctx4.lineTo(132, 55);
+            ctx4.lineTo(118, 75);
+            ctx4.lineTo(130, 105);
+            ctx4.lineTo(100, 90);
+            ctx4.lineTo(70, 105);
+            ctx4.lineTo(82, 75);
+            ctx4.lineTo(68, 55);
+            ctx4.lineTo(92, 55);
+            ctx4.closePath();
+            ctx4.fill();
+
+            ctx4.fillStyle = '#ff0000'; 
+            ctx4.beginPath();
+            ctx4.moveTo(100, 30);
+            ctx4.lineTo(101, 45);
+            ctx4.lineTo(118, 45);
+            ctx4.lineTo(108, 60);
+            ctx4.lineTo(116, 70);
+            ctx4.lineTo(100, 65);
+            ctx4.lineTo(84, 70);
+            ctx4.lineTo(92, 60);
+            ctx4.lineTo(82, 45);
+            ctx4.lineTo(99, 45);
+            ctx4.closePath();
+            ctx4.fill();
+        }
+
+        const canvas5 = document.getElementById('canvas5');
+        const ctx5 = canvas5.getContext('2d');
+
+        BowlingBall();
+
+        function BowlingBall() {
+            ctx5.fillStyle = '#00008B'; 
+            ctx5.beginPath();
+            ctx5.arc(100, 100, 60, 0, 2 * Math.PI);
+            ctx5.fill();
+
+            ctx5.fillStyle = '#8B8000'; 
+            ctx5.beginPath();
+            ctx5.arc(85, 110, 8, 0, 2 * Math.PI); 
+            ctx5.moveTo(100, 80);
+            ctx5.arc(100, 85, 8, 0, 2 * Math.PI);
+            ctx5.moveTo(125, 90);
+            ctx5.arc(115, 110, 8, 0, 2 * Math.PI);
+            
+            ctx5.fill();
+        }
+        const canvas6 = document.getElementById('canvas6');
+    const ctx6 = canvas6.getContext('2d');
+
+   
+    Pizza();
+
+    function Pizza() {
+        ctx6.fillStyle = '#d2691e'; 
+        ctx6.beginPath();
+        ctx6.arc(100, 100, 80, 0, 2 * Math.PI);
+        ctx6.fill();
+
+        ctx6.fillStyle = '#ffd700'; 
+        ctx6.beginPath();
+        ctx6.arc(100, 100, 70, 0, 2 * Math.PI);
+        ctx6.fill();
+
+        drawPepperoni(100, 100, 55, 8, '#ff0000'); 
+        
+        drawPepperoni(100, 100, 30, 5, '#ff0000'); 
+        drawPepperoni(90, 100, 10, 1, '#ff0000'); 
+        
+    }
+
+    function drawPepperoni(x, y, radius, slices, color) {
+        ctx6.fillStyle = color;
+        const sliceAngle = (2 * Math.PI) / slices;
+
+        for (let i = 0; i < slices; i++) {
+            const angle = i * sliceAngle;
+            const pepperoniX = x + radius * Math.cos(angle);
+            const pepperoniY = y + radius * Math.sin(angle);
+
+            ctx6.beginPath();
+            ctx6.arc(pepperoniX, pepperoniY, 10, 0, 2 * Math.PI);
+            ctx6.fill();
+        }
+    }
+    
+    const canvas7 = document.getElementById('canvas7');
+    const ctx7 = canvas7.getContext('2d');
+
+    
+    Cake();
+
+    function Cake() {
+        drawCakeLayer(100, 110, 80, '#e06666'); 
+        drawCakeLayer(100, 80, 60, '#ffd700'); 
+        drawCakeLayer(100, 60, 40, '#dea5a4'); 
+
+        
+        drawCandle(80, 60, 15, '#ffffff'); 
+        drawCandle(100, 50, 12, '#ffcc00'); 
+        drawCandle(120, 60, 15, '#ffffff'); 
+    }
+
+    function drawCakeLayer(x, y, radius, color) {
+        ctx7.fillStyle = color;
+        ctx7.beginPath();
+        ctx7.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx7.fill();
+    }
+
+    function drawCandle(x, y, height, color) {
+        ctx7.fillStyle = color;
+        ctx7.fillRect(x - 5, y - height, 10, height);
+    }
+
+    const canvas8 = document.getElementById('canvas8');
+    const ctx8 = canvas8.getContext('2d');
+
+    
+    MailEnvelope();
+
+    function MailEnvelope() {
+        
+        const envelopeX = 50;
+        const envelopeY = 80;
+        const envelopeWidth = 100;
+        const envelopeHeight = 60;
+        const flapHeight = 30;
+        const cornerSize = 5; 
+
+        
+        ctx8.fillStyle = '#ffcc66'; 
+        ctx8.fillRect(envelopeX, envelopeY, envelopeWidth, envelopeHeight);
+
+        ctx8.beginPath();
+        ctx8.moveTo(envelopeX, envelopeY);
+        ctx8.lineTo(envelopeX + envelopeWidth / 2, envelopeY - flapHeight);
+        ctx8.lineTo(envelopeX + envelopeWidth, envelopeY);
+        ctx8.closePath();
+        ctx8.fillStyle = '#ffcc66'; 
+        ctx8.fill();
+        ctx8.fillStyle = '#5C4033'; 
+            ctx8.fillRect(50, 90, 100, 7);
+
+    
+        const sealRadius = 5;
+        const sealX = envelopeX + envelopeWidth - 2 * sealRadius;
+        const sealY = envelopeY + envelopeHeight / 2;
+
+        ctx8.fillStyle = '#ff0000';
+        ctx8.beginPath();
+        ctx8.arc(sealX, sealY, sealRadius, 0, 2 * Math.PI);
+        ctx8.fill();
+
+        ctx8.strokeStyle = '#333'; 
+        ctx8.lineWidth = 1;
+
+        ctx8.beginPath();
+        ctx8.moveTo(envelopeX, envelopeY);
+        ctx8.lineTo(envelopeX, envelopeY + cornerSize);
+        ctx8.lineTo(envelopeX + cornerSize, envelopeY);
+        ctx8.stroke();
+
+        ctx8.beginPath();
+        ctx8.moveTo(envelopeX + envelopeWidth, envelopeY);
+        ctx8.lineTo(envelopeX + envelopeWidth - cornerSize, envelopeY);
+        ctx8.lineTo(envelopeX + envelopeWidth, envelopeY + cornerSize);
+        ctx8.stroke();
+
+        ctx8.beginPath();
+        ctx8.moveTo(envelopeX, envelopeY + envelopeHeight);
+        ctx8.lineTo(envelopeX + cornerSize, envelopeY + envelopeHeight);
+        ctx8.lineTo(envelopeX, envelopeY + envelopeHeight - cornerSize);
+        ctx8.stroke();
+
+        ctx8.beginPath();
+        ctx8.moveTo(envelopeX + envelopeWidth, envelopeY + envelopeHeight);
+        ctx8.lineTo(envelopeX + envelopeWidth, envelopeY + envelopeHeight - cornerSize);
+        ctx8.lineTo(envelopeX + envelopeWidth - cornerSize, envelopeY + envelopeHeight);
+        ctx8.stroke();
+    }
+    </script>
+</body>
+</html>
